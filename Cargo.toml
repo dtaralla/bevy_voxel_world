@@ -14,7 +14,7 @@ keywords = ["bevy", "voxels", "gamedev", "voxelengine"]
 categories = ["game-development", "graphics"]
 
 [profile.dev.package."*"]
-opt-level = 3
+opt-level = 0
 
 [dependencies]
 bevy = { version = "0.13", features = [
@@ -32,6 +32,8 @@ noise = { version = "0.8.2", optional = true }
 smooth-bevy-cameras = { version = "0.11.0", optional = true }
 
 [dev-dependencies]
+criterion = "0.5.1"
+noise = "0.8.2"
 
 [[example]]
 name = "fast_traversal_ray"
@@ -48,3 +50,7 @@ required-features = ["noise"]
 [[example]]
 name = "multiple_worlds"
 required-features = ["noise"]
+
+[[bench]]
+name = "line_traversal"
+harness = false
