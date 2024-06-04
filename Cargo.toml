@@ -54,3 +54,7 @@ required-features = ["noise"]
 [[bench]]
 name = "line_traversal"
 harness = false
+
+[[bench]]
+name = "coord_hash"
+harness = false
